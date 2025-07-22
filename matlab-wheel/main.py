@@ -17,6 +17,7 @@ def matlab_processing(row: dict):
 
     # Call function here
     output = quixmatlab_client.rot(v, theta)
+    print(output)
 
     # Incorporating result to row
     row["x_new"] = output[0][0]
