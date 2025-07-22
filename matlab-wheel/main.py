@@ -12,17 +12,15 @@ def matlab_processing(row: dict):
     # Prepare function inputs
     x = row["x"]
     y = row["y"]
+    v = np.array([[x],[y]])
     theta = np.pi/4 # 45 degrees in radians
 
     # Call function here
-    input_matrix = np.array([[0, x, y, theta]])
-    # print("Input", input_matrix)
-    output_matrix = quixmatlab_client.simulink_wrapper(input_matrix)
-    # print("Output", output_matrix)
+    output = quixmatlab_client.rot(v, theta)
 
     # Incorporating result to row
-    row["x_new"] = output_matrix[0][0]
-    row["y_new"] = output_matrix[0][1]
+    row["x_new"] = output[0][0]
+    row["y_new"] = output[0][1]
     
 
 def main():
