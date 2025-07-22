@@ -23,6 +23,23 @@ deployments:
       - name: ms_to_sleep
         inputType: FreeText
         value: 500
+  - name: Matlab Wheel
+    application: matlab-wheel
+    version: latest
+    deploymentType: Service
+    resources:
+      cpu: 1000
+      memory: 2000
+      replicas: 1
+    variables:
+      - name: input
+        inputType: InputTopic
+        description: Name of the input topic to listen to.
+        value: 2d-vector
+      - name: output
+        inputType: OutputTopic
+        description: Name of the output topic to write to.
+        value: matlab-output
 
 # This section describes the Topics of the data pipeline
 topics:
