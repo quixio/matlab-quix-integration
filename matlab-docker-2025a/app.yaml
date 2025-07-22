@@ -1,0 +1,17 @@
+name: Matlab Docker 2025a
+language: python
+variables:
+  - name: input
+    inputType: InputTopic
+    multiline: false
+    description: This is the raw data input topic
+    defaultValue: 2d-vector
+    required: true
+  - name: output
+    inputType: OutputTopic
+    multiline: false
+    defaultValue: matlab-docker-2025a
+    required: true
+dockerfile: dockerfile
+runEntryPoint: main.py
+defaultFile: main.py
