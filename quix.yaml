@@ -44,3 +44,4 @@ deployments:
 # This section describes the Topics of the data pipeline
 topics:
   - name: 2d-vector
+  - name: matlab-output
