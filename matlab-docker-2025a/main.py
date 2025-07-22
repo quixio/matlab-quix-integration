@@ -24,7 +24,9 @@ eng = matlab.engine.start_matlab()
 def matlab_processing(row: dict):
     print("Calculate square root")
     # Define the input vector and angle
-    v = matlab.double([[row["x"]], [row["y"]]])  # column vector
+    x = row["x"]
+    y = row["y"]
+    v = matlab.double([[x], [y]])  # column vector
     theta = math.pi / 4  # 45 degrees in radians
     print("Calling rot()...")
     output = eng.MATLAB.rot(v, theta)
