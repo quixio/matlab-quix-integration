@@ -20,7 +20,7 @@ def matlab_processing(row: dict):
 
     # Incorporating result to row
     row["x_new"] = output[0][0]
-    row["y_new"] = output[0][1]
+    row["y_new"] = output[1][0]
     
 
 def main():
