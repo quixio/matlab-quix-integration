@@ -45,3 +45,4 @@ deployments:
 topics:
   - name: 2d-vector
   - name: matlab-output
+  - name: matlab-docker-2025a
