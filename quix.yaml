@@ -40,6 +40,24 @@ deployments:
         inputType: OutputTopic
         description: Name of the output topic to write to.
         value: matlab-output
+  - name: Matlab Docker 2025a
+    application: matlab-docker-2025a
+    version: latest
+    deploymentType: Service
+    resources:
+      cpu: 1000
+      memory: 2000
+      replicas: 1
+    variables:
+      - name: input
+        inputType: InputTopic
+        description: This is the raw data input topic
+        required: true
+        value: 2d-vector
+      - name: output
+        inputType: OutputTopic
+        required: true
+        value: matlab-docker-2025a
 
 # This section describes the Topics of the data pipeline
 topics:
