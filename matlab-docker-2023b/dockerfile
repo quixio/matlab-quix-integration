@@ -1,4 +1,4 @@
-FROM mathworks/matlab:r2025a
+FROM mathworks/matlab:r2023b
 
 USER root
 
@@ -44,6 +44,11 @@ COPY . .
 
 # Switch to MATLAB user
 USER matlab
+ENV MW_LICENSING_DIAGNOSTICS=1
+ENV MLM_LICENSE_FILE=27000@your-license-server
+
+# Add MATLAB Runtime
+ENV LD_LIBRARY_PATH=/opt/matlab/R2024b/bin/glnxa64:$LD_LIBRARY_PATH
 
 # Set final working directory
 WORKDIR "/app/${MAINAPPPATH}"
