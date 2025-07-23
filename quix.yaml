@@ -58,6 +58,24 @@ deployments:
         inputType: OutputTopic
         required: true
         value: matlab-docker-2025a
+  - name: Matlab Docker 2023b
+    application: matlab-docker-2023b
+    version: latest
+    deploymentType: Service
+    resources:
+      cpu: 1000
+      memory: 2000
+      replicas: 1
+    variables:
+      - name: input
+        inputType: InputTopic
+        description: This is the raw data input topic
+        required: true
+        value: 2d-vector
+      - name: output
+        inputType: OutputTopic
+        required: true
+        value: matlab-docker-2023b
 
 # This section describes the Topics of the data pipeline
 topics:
