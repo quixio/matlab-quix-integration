@@ -44,6 +44,8 @@ COPY . .
 
 # Switch to MATLAB user
 USER matlab
+ENV MW_LICENSING_DIAGNOSTICS=1
+ENV MLM_LICENSE_FILE=27000@your-license-server
 
 # Set final working directory
 WORKDIR "/app/${MAINAPPPATH}"
