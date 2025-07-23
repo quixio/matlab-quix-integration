@@ -1,4 +1,4 @@
-FROM containers.mathworks.com/matlab-runtime:r2024b-full
+FROM containers.mathworks.com/matlab-runtime:r2024b
 
 USER root
 # Add MATLAB Runtime
