@@ -25,7 +25,7 @@ deployments:
         value: 500
   - name: Matlab Wheel
     application: matlab-wheel
-    version: latest
+    version: a63d54073fe63039d147c02fcf2432f365a0d127
     deploymentType: Service
     resources:
       cpu: 1000
