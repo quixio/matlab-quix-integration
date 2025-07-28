@@ -6,14 +6,14 @@ ENV LD_LIBRARY_PATH=/opt/matlabruntime/R2024b/runtime/glnxa64/:$LD_LIBRARY_PATH
 ENV AGREE_TO_MATLAB_RUNTIME_LICENSE=yes
 
 # Install python3.12, venv, and pip
-RUN apt-get update && apt-get install -y python3.12 python3.12-venv python3-pip
+#RUN apt-get update && apt-get install -y python3.12 python3.12-venv python3-pip
 
 # Create virtual environment
-ENV VENV_PATH=/opt/venv
-RUN python3.12 -m venv $VENV_PATH
+#ENV VENV_PATH=/opt/venv
+#RUN python3.12 -m venv $VENV_PATH
 
 # Add venv to PATH
-ENV PATH="$VENV_PATH/bin:$PATH"
+#ENV PATH="$VENV_PATH/bin:$PATH"
 
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive \
