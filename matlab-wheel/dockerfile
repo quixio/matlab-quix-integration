@@ -1,4 +1,4 @@
-FROM containers.mathworks.com/matlab-runtime:r2024b
+FROM python:3.12.5-slim-bookworm
 
 USER root
 # Add MATLAB Runtime
