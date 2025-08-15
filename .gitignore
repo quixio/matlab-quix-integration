@@ -1,8 +1,20 @@
 
 matlab-wheel/.DS_Store
 
-matlab-wheel/aux-files/.DS_Store
+matlab-wheel/compilation-files/.DS_Store
 
 matlab-wheel/.idea/workspace.xml
 
 .DS_Store
+
+.idea/inspectionProfiles/profiles_settings.xml
+
+.idea/inspectionProfiles/Project_Default.xml
+
+.idea/matlab-quix-integration.iml
+
+.idea/misc.xml
+
+.idea/modules.xml
+
+.idea/vcs.xml

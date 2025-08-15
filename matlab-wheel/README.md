@@ -5,25 +5,17 @@
 ## How to build the wheel
 
 ### 01 - Your matlab function
-Ensure you understand the type and number of inputs and outputs from your functino.
+- Ensure you understand the type and number of inputs and outputs from your function.
+- Save your .m function file in the compilation-files folder (like the rot.m example, that you can erase)
 
-### 02 - Copy Auxiliary Files
-- Copy all files from the `aux-files` folder into the same directory as your Matlab function.
-- Open MATLAB from that directory.
-
-### 03 - Compile for Quix
-Let's compile the MATLAB function using the Quix compiler. Just run the `quix_compiler.m` replacing the arguments:
+### 02 - Compile for Quix
+Let's compile the MATLAB function using the Quix compiler: 
+- Open MATLAB from the compilations-file folder
+- Run the `quix_compiler.m` replacing the arguments:
 quix_compiler('function_name', 'py')
-This will generate a folder (py) containing the Python-compatible code.
-If you used MATLAB Online, download and unzip the compiled folder (py.zip) to your local machine.
-Once the compilation is complete, you can close MATLAB.
+This will generate a folder (py) containing the Python-compatible code, as well as the .whl package that we'll deploy to Quix.
 
-### 04 - Build the wheel
-From your terminal, navigate to the local (py) folder and run:
-./build_wheel.sh
-This script will create a .whl file. This file is the package you’ll deploy to Quix.
-
-### 05 - Update the .whl in the quix app
+### 03 - Update the .whl in the quix app
 Replace the existing .whl file in your Quix app with the new one you just built.
 ⚠️ If the new filename differs from the previous one, make sure to update the requirements.txt file accordingly.
 
