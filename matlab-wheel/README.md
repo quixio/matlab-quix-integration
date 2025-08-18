@@ -16,13 +16,13 @@ Let's compile the MATLAB function using the Quix compiler:
   quix_compiler('function_name', 'py')
 This will generate a folder named py containing the Python-compatible code, as well as the .whl package that we’ll deploy to Quix.
 
-### 03 - Update the .whl in the quix app
+<### 03 - Update the .whl in the quix app
 Replace the existing .whl file in your Quix app with the new one you just built.
 ⚠️ If the new filename differs from the previous one, make sure to update the requirements.txt file accordingly.
 
 ### 04 - Update main.py
 Edit the `matlab_processing` function in `main.py` to accommodate your specific function's input and output variables.
-
+>
 ## Environment variables
 
 The code sample uses the following environment variables:
