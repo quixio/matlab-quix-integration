@@ -15,10 +15,10 @@ MATLAB is a powerful environment for numerical computing, but deploying MATLAB f
 
 We provide three templates, showcasing two different integration strategies:
 
-1. **MATLAB Wheel [Template](https://github.com/quixio/matlab-quix-integration/tree/main/matlab-wheel)**  
+1. **MATLAB Wheel [Template](https://github.com/quixio/matlab-quix-integration/tree/Main/matlab-wheel)**  
    Recommended. Compile MATLAB functions into Python-compatible `.whl` packages and run them seamlessly inside Quix.
 
-2. **MATLAB Engine [2023b](https://github.com/quixio/matlab-quix-integration/tree/main/matlab-docker-2023b) | [2025a](https://github.com/quixio/matlab-quix-integration/tree/main/matlab-docker-2025a)**  
+2. **MATLAB Engine [2023b](https://github.com/quixio/matlab-quix-integration/tree/Main/matlab-docker-2023b) | [2025a](https://github.com/quixio/matlab-quix-integration/tree/Main/matlab-docker-2025a)**  
    Run MATLAB functions directly in Quix using a MATLAB Engine instance. Examples provided both for 2023b and 2025a versions.
 
 
