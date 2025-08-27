@@ -1,0 +1,84 @@
+# Quix Project Descriptor
+# This file describes the data pipeline and configuration of resources of a Quix Project.
+
+metadata:
+  version: 1.0
+
+# This section describes the Deployments of the data pipeline
+deployments:
+  - name: data-source
+    application: 2d-vector-data-source
+    version: latest
+    deploymentType: Service
+    resources:
+      cpu: 200
+      memory: 500
+      replicas: 1
+    variables:
+      - name: output
+        inputType: OutputTopic
+        description: Name of the output topic to write into
+        required: true
+        value: 2d-vector
+      - name: ms_to_sleep
+        inputType: FreeText
+        value: 500
+  - name: Matlab Wheel
+    application: matlab-wheel
+    version: a63d54073fe63039d147c02fcf2432f365a0d127
+    deploymentType: Service
+    resources:
+      cpu: 1000
+      memory: 2000
+      replicas: 1
+    variables:
+      - name: input
+        inputType: InputTopic
+        description: Name of the input topic to listen to.
+        value: 2d-vector
+      - name: output
+        inputType: OutputTopic
+        description: Name of the output topic to write to.
+        value: matlab-output
+  - name: Matlab Docker 2025a
+    application: matlab-docker-2025a
+    version: latest
+    deploymentType: Service
+    resources:
+      cpu: 1000
+      memory: 2000
+      replicas: 1
+    variables:
+      - name: input
+        inputType: InputTopic
+        description: This is the raw data input topic
+        required: true
+        value: 2d-vector
+      - name: output
+        inputType: OutputTopic
+        required: true
+        value: matlab-docker-2025a
+  - name: Matlab Docker 2023b
+    application: matlab-docker-2023b
+    version: latest
+    deploymentType: Service
+    resources:
+      cpu: 1000
+      memory: 2000
+      replicas: 1
+    variables:
+      - name: input
+        inputType: InputTopic
+        description: This is the raw data input topic
+        required: true
+        value: 2d-vector
+      - name: output
+        inputType: OutputTopic
+        required: true
+        value: matlab-docker-2023b
+
+# This section describes the Topics of the data pipeline
+topics:
+  - name: 2d-vector
+  - name: matlab-output
+  - name: matlab-docker-2025a

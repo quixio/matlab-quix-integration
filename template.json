@@ -1,0 +1,14 @@
+{
+  "TemplateId": "matlab-quix-integration",
+  "Name": "Matlab Functions Integration with Quix",
+  "SshUrl": "https://github.com/quixio/matlab-quix-integration.git",
+  "Branch": "main",
+  "Description": "This template demonstrates how to integrate MATLAB functions into a streaming pipeline transformation. It provides two methods: packaging the function as a Python wheel or running the original MATLAB code on MATLAB Runtime.",
+  "Tags": {
+    "languages": ["python", "matlab"],
+    "category": ["sample", "demo"]
+  },
+  "ImageFile": "images/pipeline.png",
+  "ReadmeFile": "README.md",
+  "Published": true
+}
